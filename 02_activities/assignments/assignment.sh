@@ -60,6 +60,10 @@ cp ./data/raw/*event*.log ./data/processed/event_logs
 # These could be log or text files, so I will keep the extension unspecified 
 rm -f ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
 
+# This line was from my "coworker" and I am keeping it to remove "data" after it was generated
+# This ensures only "assignment.sh" is committed
+rm -rf ./data
+
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # I'm assuming this is ALL the files ONLY, NOT the folders
 # I can use "brace expansion" to specify multiple directories in a single command
