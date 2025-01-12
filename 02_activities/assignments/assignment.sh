@@ -60,16 +60,18 @@ cp ./data/raw/*event*.log ./data/processed/event_logs
 # These could be log or text files, so I will keep the extension unspecified 
 rm -f ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
 
-# This line was from my "coworker" and I am keeping it to remove "data" after it was generated
-# This ensures only "assignment.sh" is committed
-rm -rf ./data
-
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # I'm assuming this is ALL the files ONLY, NOT the folders
 # I can use "brace expansion" to specify multiple directories in a single command
 ls ./data/processed/{server_logs,user_logs,event_logs} > ./data/inventory.text
-# I'm using ">" so it does not maintain a record of the past subfolder contents and only shows what the current subfolder contents look like
 
+# I'm using ">" so it does not maintain a record of the past subfolder contents and only shows what the current subfolder contents look like
+# This line was from my "coworker" and I am keeping it to remove "data" after it was generated
+# This ensures only "assignment.sh" is committed
+# When I was testing, I commented this so I could examine data
+# In assignment_test_clean, I have my undeleted data folders
+# For submission, I am uncommenting this
+rm -rf ./data
 ###########################################
 
 echo "Project setup is complete!"
