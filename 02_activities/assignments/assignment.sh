@@ -63,7 +63,7 @@ rm -f ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 # I'm assuming this is ALL the files ONLY, NOT the folders
 # I can use "brace expansion" to specify multiple directories in a single command
-ls ./data/processed/{server_logs,user_logs,event_logs} > ./data/inventory.text
+ls ./data/processed/{server_logs,user_logs,event_logs} > ./data/inventory.txt
 # I'm using ">" so it does not maintain a record of the past subfolder contents and only shows what the current subfolder contents look like
 
 # This line was from my "coworker" and I am keeping it to remove "data" after it was generated
