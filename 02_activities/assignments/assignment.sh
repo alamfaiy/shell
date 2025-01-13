@@ -64,8 +64,8 @@ rm -f ./data/raw/*ipaddr* ./data/processed/user_logs/*ipaddr*
 # I'm assuming this is ALL the files ONLY, NOT the folders
 # I can use "brace expansion" to specify multiple directories in a single command
 ls ./data/processed/{server_logs,user_logs,event_logs} > ./data/inventory.text
-
 # I'm using ">" so it does not maintain a record of the past subfolder contents and only shows what the current subfolder contents look like
+
 # This line was from my "coworker" and I am keeping it to remove "data" after it was generated
 # This ensures only "assignment.sh" is committed
 # When I was testing, I commented this so I could examine data
